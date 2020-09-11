@@ -1,0 +1,43 @@
+Models:
+  Models/pendidikan:
+    name: string
+    timestamps: true
+    softdeletes: true
+  
+  Models/pengalaman:
+    name: string
+    tahun: string
+    describe: longtext
+    timestamps: true
+    softdeletes: true 
+
+  Models/skill:
+    name: string
+    index: integer
+    timestamps: true
+    softdeletes: true
+
+  Models/project:
+    name: string
+    photo: string
+    timestamps: true
+    softdeletes: true
+
+  Models/artikel:
+    category_id: id foreign
+    title: string
+    photo: string nullable
+    timestamps: true
+    softdeletes: true
+  
+  Models/category:
+    parent_id: id foreign:categories nullable
+    name: string
+    timestamps: true
+    softdeletes: true
+    relationships:
+      hasMany: artikel
+
+  
+
+
