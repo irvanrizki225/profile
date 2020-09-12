@@ -17,3 +17,12 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+route::get('education', 'API\EducationController@get');
+route::get('experience', 'API\ExperienceController@get');
+route::get('blog', 'API\BlogController@get');
+route::get('project', 'API\ProjectController@get');
+route::get('skill', 'API\SkillController@get');
+route::get('category', 'API\CategoryController@get');
+route::get('tag', 'API\TagController@get');
+// route::get('about', 'AboutController@get');

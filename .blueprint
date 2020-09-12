@@ -1,1 +1,32 @@
-{  }
+created:
+    - database/migrations/2020_08_26_124521_create_categories_table.php
+    - database/migrations/2020_08_26_124522_create_articles_table.php
+    - database/migrations/2020_08_26_124523_create_tags_table.php
+    - database/migrations/2020_08_26_124524_create_education_table.php
+    - database/migrations/2020_08_26_124525_create_experiences_table.php
+    - database/migrations/2020_08_26_124526_create_skills_table.php
+    - database/migrations/2020_08_26_124527_create_projects_table.php
+    - database/migrations/2020_08_26_124527_create_article_tag_table.php
+    - app/Models/category.php
+    - app/Models/article.php
+    - app/Models/tag.php
+    - app/Models/education.php
+    - app/Models/experience.php
+    - app/Models/skill.php
+    - app/Models/project.php
+    - database/factories/Models/CategoryFactory.php
+    - database/factories/Models/ArticleFactory.php
+    - database/factories/Models/TagFactory.php
+    - database/factories/Models/EducationFactory.php
+    - database/factories/Models/ExperienceFactory.php
+    - database/factories/Models/SkillFactory.php
+    - database/factories/Models/ProjectFactory.php
+models:
+    User: { name: string, email: string, email_verified_at: 'datetime nullable', password: string, remember_token: 'string:100 nullable' }
+    Models/category: { parent_id: 'id foreign:categories nullable', lft: 'integer unsigned nullable', rgt: 'integer unsigned nullable', depth: 'integer unsigned nullable', name: string, slug: 'string unique', timestamps: timestamps, softdeletes: softDeletes, relationships: { hasMany: article } }
+    Models/article: { category_id: 'id foreign:categories', title: string, slug: 'string unique default:''''', content: text, photo: 'string nullable', status: 'enum:PUBLISHED,DRAFT', date: date, featured: 'boolean default:0', timestamps: timestamps, softdeletes: softDeletes, relationships: { belongsToMany: tag } }
+    Models/tag: { name: string, slug: 'string unique', timestamps: timestamps, softdeletes: softDeletes, relationships: { belongsToMany: article } }
+    Models/education: { name: string, timestamps: timestamps, softdeletes: softdeletes }
+    Models/experience: { name: string, tahun: string, describe: longtext, timestamps: timestamps, softdeletes: true }
+    Models/skill: { name: string, index: integer, timestamps: timestamps, softdeletes: softdeletes }
+    Models/project: { name: string, photo: string, timestamps: timestamps, softdeletes: softdeletes }

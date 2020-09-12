@@ -14,13 +14,13 @@
               <div class="col-md-12 heading-section ftco-animate">
                   <h1 class="big">About</h1>
                 <h2 class="mb-4">About Me</h2>
-                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                <p>Moto hidup "melakukan apa saja jika bermanfaat pada kita sendiri dan jangan merugikan orang lain".</p>
                 <ul class="about-info mt-4 px-md-0 px-2">
                     <li class="d-flex"><span>Name:</span> <span>Muhamad Irvan Rizki</span></li>
-                    <li class="d-flex"><span>Date of birth:</span> <span>November 28, 1989</span></li>
-                    <li class="d-flex"><span>Address:</span> <span>San Francisco CA 97987 USA</span></li>
-                    <li class="d-flex"><span>Zip code:</span> <span>1000</span></li>
-                    <li class="d-flex"><span>Email:</span> <span>ronaldo@gmail.com</span></li>
+                    <li class="d-flex"><span>Date of birth:</span> <span>Juni 25, 1998</span></li>
+                    <li class="d-flex"><span>Address:</span> <span>Jl Bintara 8 Rt 03 Rw 03 No 15</span></li>
+                    <li class="d-flex"><span>Zip code:</span> <span>17134</span></li>
+                    <li class="d-flex"><span>Email:</span> <span>irvanrizki225@gmail.com</span></li>
                     <li class="d-flex"><span>Phone: </span> <span>+1-2234-5678-9-0</span></li>
                 </ul>
               </div>

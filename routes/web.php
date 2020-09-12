@@ -16,7 +16,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
 Route::get('/', 'DashboardController@index')->name('dashboard');
+Route::get('/oke', 'DashboardController@oke')->name('oke');
+Route::get('/skill', 'SkillController@index')->name('skill');
+Route::resource('skill', 'SkillController');
 
 Auth::routes();
 

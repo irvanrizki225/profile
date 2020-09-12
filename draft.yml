@@ -1,10 +1,45 @@
-Models:
-  Models/pendidikan:
+models:
+
+  Models/category:
+    parent_id: id foreign:categories nullable
+    lft: integer unsigned nullable
+    rgt: integer unsigned nullable
+    depth: integer unsigned nullable
+    name: string
+    slug: string unique
+    timestamps: true
+    softDeletes: true
+    relationships:
+      hasMany: article
+
+  Models/article:
+    category_id: id foreign:categories
+    title: string
+    slug: string unique default:''
+    content: text
+    photo: string nullable
+    status: enum:PUBLISHED,DRAFT
+    date: date
+    featured: boolean default:0
+    timestamps: true
+    softDeletes: true
+    relationships:
+      belongsToMany: tag
+  
+  Models/tag:
+    name: string
+    slug: string unique
+    timestamps: true
+    softDeletes: true
+    relationships:
+      belongsToMany: article
+
+  Models/education:
     name: string
     timestamps: true
     softdeletes: true
   
-  Models/pengalaman:
+  Models/experience:
     name: string
     tahun: string
     describe: longtext
@@ -22,22 +57,3 @@ Models:
     photo: string
     timestamps: true
     softdeletes: true
-
-  Models/artikel:
-    category_id: id foreign
-    title: string
-    photo: string nullable
-    timestamps: true
-    softdeletes: true
-  
-  Models/category:
-    parent_id: id foreign:categories nullable
-    name: string
-    timestamps: true
-    softdeletes: true
-    relationships:
-      hasMany: artikel
-
-  
-
-
